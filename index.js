@@ -7,7 +7,6 @@ const duplicate = numbers.filter(function (value, index, array) {
 });
 console.log(duplicate);
 
-
 // problem solving-2
 // find out how much time happy has used and the time when happy has used then which position it is?
 const sentence =
@@ -21,3 +20,18 @@ let position = sentence.search(/happys/i); //search will find out the 1st positi
 // now if you want to check
 position = position >= 0 ? position : "Not Found!!!";
 console.log(position);
+
+// problem-3
+// input : linearSearch(["a","b","c","d",c"],"c")
+// output:2 or not found
+// problem now you need to solve this linearSearch function
+function linearSearch(arr, val) {
+  const length = arr.length;
+  for (i = 0; i < length; i++) {
+    if (arr[i] === val) {
+      return i;
+    }
+  }
+  return "Not Found!!!";
+}
+console.log(linearSearch(["a", "a", "b", "c", "d", "c"], "c"));
